@@ -41,10 +41,10 @@
       </el-col>
     </el-form-item>
     <el-form-item size="large" >
-      <center>
+      <div style="text-align: center;">
         <el-button type="info" @click="submitForm('ruleForm')" >提交</el-button>
         <el-button @click="resetForm('ruleForm')">重置</el-button>
-      </center>
+      </div>
     </el-form-item>
   </el-form> 
 </template>
@@ -58,8 +58,7 @@ import url from '@/api/config'
 export default {
   name:'AddClassDetails',
   mounted(){
-    this.getAllIteam();
-    
+    this.getAllIteam()
   },
   data(){
     return {
