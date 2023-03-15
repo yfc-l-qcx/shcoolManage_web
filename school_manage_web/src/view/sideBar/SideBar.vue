@@ -78,10 +78,7 @@
      
         <!-- 内容 -->
         <!-- router跳转组件 -->
-        
           <router-view></router-view>
-        
-          
       </el-container>
     </el-container>
   </div>

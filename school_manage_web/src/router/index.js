@@ -4,6 +4,7 @@ import ShowLhDetails from "../view/sideBar/page/ShowLhDetails";
 import ComposeLh from "../view/sideBar/page/ComposeLh"
 import TeacherInfo from "../view/sideBar/page/teacher/TeacherInfo"
 import SubjectRank from "../view/sideBar/page/subjectLh/SubjectRank"
+import Login from "@/view/login/Login.vue";
 
 
 
@@ -14,7 +15,10 @@ console.log("执行了router");
 const routers = [
   {
     path: '/',
-    redirect:'/mainpage'
+    redirect:'/login'
+  },{
+    path: '/login',
+    component: Login
   },{
     path:'/mainpage',
     component: MainPage

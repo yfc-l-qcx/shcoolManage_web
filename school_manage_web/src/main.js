@@ -29,7 +29,7 @@ import { Table, TableColumn, Container, DropdownItem,
   Aside, Menu, Submenu, MenuItemGroup, MenuItem, Header, Dropdown,
   DropdownMenu, Main, Footer, Input, Row, Button, Pagination, Popover,
   Form, FormItem, Option, Select, Dialog, Autocomplete, Upload, DatePicker,
-  Col,
+  Col,Card,Icon
 } from 'element-ui'
 // import elementUi from "element-ui";
 // import 'element-ui/lib/theme-chalk/index.css';
@@ -66,6 +66,8 @@ Vue.use(Autocomplete)
 Vue.use(Upload)
 Vue.use(DatePicker)
 Vue.use(Col)
+Vue.use(Card)
+Vue.use(Icon)
 Vue.use(VueRouter)
 
 //注册打印组件
