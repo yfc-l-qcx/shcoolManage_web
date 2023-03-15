@@ -15,8 +15,7 @@
 </template>
 
 <script>
-import axios from "axios";
-import url from "@/api/config"
+
 import {isvalidUsername} from "@/utils/validate";
 
 export default {
