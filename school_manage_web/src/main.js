@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './assets/siderbar.css';
 
 //引入打印组件
 // import Print from './api/utils/print';
@@ -15,7 +14,9 @@ import VueRouter from 'vue-router'
 // 引入路由器
 import router from "./router/index";
 
+import Vuex from 'vuex'
 
+import '@/icons' //icon
 
 import { MessageBox } from "element-ui";
 
@@ -24,6 +25,7 @@ import { MessageBox } from "element-ui";
 // import * as XLSX from 'xlsx'
 // import XLSXS from 'xlsx-style-medalsoft';
 
+// import '@/styles/index.scss'
 
 import { Table, TableColumn, Container, DropdownItem,
   Aside, Menu, Submenu, MenuItemGroup, MenuItem, Header, Dropdown,
@@ -37,6 +39,9 @@ import { Table, TableColumn, Container, DropdownItem,
 Vue.config.productionTip = false
 // 并把消息提示框挂载到全局使用
 Vue.prototype.$confirm = MessageBox.confirm;
+
+Vue.use(Vuex)
+
 Vue.use(Table)
 Vue.component('el-table-column', TableColumn)
 Vue.component('el-menu-item-group', MenuItemGroup)
