@@ -108,7 +108,16 @@ export default {
           this.$store.dispatch('Login', this.loginForm).then(() => {
             this.loading = false;
             setCookie("username", this.loginForm.username, 15);
+            setCookie("password", this.loginForm.password, 15);
+
+            console.log("跳转页面之前")
+            this.$router.push({path: '/'});
+          }).catch(() => {
+            this.loading = false
           })
+        } else {
+          console.log("参数验证不合法");
+          return false
         }
       })
     },
@@ -139,7 +148,7 @@ export default {
 
   .login-center-layout {
     background: #409EFF;
-    width: auto;
+    width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%;

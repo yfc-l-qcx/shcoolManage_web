@@ -16,7 +16,7 @@ service.interceptors.request.use(config => {
   }
   return config
 }, error => {
-  console.log(error)
+  console.log("request拦截器error=",error)
   Promise.reject(error)
 })
 
@@ -24,6 +24,7 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(
   response => {
     const res = response.data
+    console.log("respone拦截器res=", res)
     if (res.code !== 200) {
       Message({
         message: res.message,

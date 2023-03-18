@@ -5,6 +5,7 @@ import ComposeLh from "../view/sideBar/page/ComposeLh"
 import TeacherInfo from "../view/sideBar/page/teacher/TeacherInfo"
 import SubjectRank from "../view/sideBar/page/subjectLh/SubjectRank"
 import Login from "@/view/login/Login.vue";
+import SideBar from "@/view/sideBar/SideBar.vue";
 
 
 
@@ -14,9 +15,27 @@ console.log("执行了router");
 // 创建路由对象
 const routers = [
   {
-    path: '/',
-    redirect:'/login'
-  },{
+    path: '/login',
+    component: Login,
+    redirect: '/login',
+    hidden: true},
+
+  {
+    path: '',
+    component: SideBar,
+    redirect: '/sidebar',
+    childern: [{
+      path: '/mainpage',
+      name: 'mainpage',
+      meta: {title: '首页', icon: 'home'}
+    }]
+
+  },
+  // {
+  //   path: '/',
+  //   redirect:'/login'
+  // },
+  {
     path: '/login',
     component: Login
   },{

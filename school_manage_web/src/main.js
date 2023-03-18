@@ -14,11 +14,11 @@ import VueRouter from 'vue-router'
 // 引入路由器
 import router from "./router/index";
 
-import Vuex from 'vuex'
-
 import '@/icons' //icon
 
 import { MessageBox } from "element-ui";
+
+import store from "@/store";
 
 
 // import FileSaver from 'file-saver';
@@ -39,8 +39,6 @@ import { Table, TableColumn, Container, DropdownItem,
 Vue.config.productionTip = false
 // 并把消息提示框挂载到全局使用
 Vue.prototype.$confirm = MessageBox.confirm;
-
-Vue.use(Vuex)
 
 Vue.use(Table)
 Vue.component('el-table-column', TableColumn)
@@ -82,6 +80,7 @@ Vue.use(Print)
 new Vue({
   el:'#app',
   router,
+  store,
   render: h => h(App),
   beforeCreate(){
     Vue.prototype.$bus = this//安装全局事件总线

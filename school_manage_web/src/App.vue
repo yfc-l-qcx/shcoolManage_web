@@ -23,6 +23,9 @@ export default {
  #app{
   height: 100vh;
  }
+ body {
+   margin: 0;
+ }
  .print {
 		height: calc(100% - 40px);
 		overflow-y: auto;
