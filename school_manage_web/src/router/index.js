@@ -6,6 +6,7 @@ import TeacherInfo from "../view/sideBar/page/teacher/TeacherInfo"
 import SubjectRank from "../view/sideBar/page/subjectLh/SubjectRank"
 import Login from "@/view/login/Login.vue";
 import SideBar from "@/view/sideBar/SideBar.vue";
+import Layout from "@/view/layout/Layout.vue";
 
 
 
@@ -17,18 +18,22 @@ const routers = [
   {
     path: '/login',
     component: Login,
-    redirect: '/login',
-    hidden: true},
-
+    hidden: true
+  },
   {
     path: '',
-    component: SideBar,
-    redirect: '/sidebar',
+    component: Layout,
+    redirect: '/mainpage',
     childern: [{
       path: '/mainpage',
       name: 'mainpage',
       meta: {title: '首页', icon: 'home'}
     }]
+
+  },
+  {
+    path: '/layout',
+    component: Layout,
 
   },
   // {

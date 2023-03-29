@@ -89,16 +89,18 @@ export default {
     }
   },
   watch:{
-    "sizeForm.className"(){
+    "sizeForm.className"(e){
       this.sizeForm.classTeacher = '';
       // console.log("@@@111", this.classList, this.typeList);
       //let s1 = this.classList.map(item => item.className)
-      
+      console.log("=======e==", e)
       //自动输入相应班主任名字
       let s2 = this.classList.map(item => item.classTeacher)
-      this.sizeForm.classTeacher = s2[this.sizeForm.className[0] - 1];
+      this.sizeForm.classTeacher = s2[e[0]- 1];
+      console.log("s2====",s2);
       for(let i = 1; i < this.sizeForm.className.length; i++) {
-        this.sizeForm.classTeacher += ',' +  s2[i] ;
+        this.sizeForm.classTeacher += ',' +  s2[e[i] - 1] ;
+        console.log("每次添加=",s2[e[i]-1])
       }
 
       // this.sizeForm.className.forEach(element => {

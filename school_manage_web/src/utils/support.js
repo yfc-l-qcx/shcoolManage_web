@@ -6,6 +6,7 @@ export function getSupport() {
 }
 
 export function setSupport(isSupport) {
+    //expires 创建有效期为3天
     return Cookies.set(SupportKey, isSupport, { expires: 3})
 }
 

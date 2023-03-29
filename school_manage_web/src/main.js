@@ -25,7 +25,7 @@ import store from "@/store";
 // import * as XLSX from 'xlsx'
 // import XLSXS from 'xlsx-style-medalsoft';
 
-// import '@/styles/index.scss'
+import '@/styles/index.scss'
 
 import { Table, TableColumn, Container, DropdownItem,
   Aside, Menu, Submenu, MenuItemGroup, MenuItem, Header, Dropdown,

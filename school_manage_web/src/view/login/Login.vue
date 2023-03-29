@@ -142,9 +142,9 @@ export default {
   .login-title {
     text-align: center;
   }
-  .color-main {
-    color: #409EFF;
-  }
+  /*.color-main {*/
+  /*  color: #409EFF;*/
+  /*}*/
 
   .login-center-layout {
     background: #409EFF;

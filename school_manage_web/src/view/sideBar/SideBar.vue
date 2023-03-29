@@ -122,7 +122,5 @@ export default {
 
 <style>
   
-  .el-aside {
-    color: #333;
-  }
+
 </style>
